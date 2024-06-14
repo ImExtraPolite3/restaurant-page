@@ -5,6 +5,14 @@
 
 body {
   font-family: 'SourceSans3';
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 .hide {

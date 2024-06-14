@@ -18,6 +18,8 @@ export default function home() {
   const locationTitle = document.createElement('h2');
   const location = document.createElement('p');
 
+  createHome.classList.add('home-page');
+
   title.textContent = 'La Bella Cucina';
   paraOne.textContent = 'Step into La Bella Cucina, a culinary haven where traditional flavors meet modern sophistication. Nestled in the heart of downtown, our restaurant offers an inviting ambiance that blends rustic charm with contemporary elegance, making it the perfect setting for any occasion.';
   paraTwo.textContent = 'At La Bella Cucina, we pride ourselves on crafting a dining experience that tantalizes all your senses. Our menu, inspired by the rich culinary heritage of Italy, features a diverse selection of dishes prepared with the freshest, locally-sourced ingredients. From our handmade pastas and wood-fired pizzas to our succulent seafood and mouthwatering meat dishes, each plate is a testament to our passion for authentic, high-quality cuisine.';
