@@ -6,3 +6,11 @@
 body {
   font-family: 'SourceSans3';
 }
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: all;
+}
