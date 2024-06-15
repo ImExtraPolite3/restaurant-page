@@ -10,7 +10,8 @@ export default function menu() {
   const content = document.getElementById('content'); //Call content from html
   //create div to hold all menu information
   const menuPage = document.createElement('div');
-  menuPage.classList.add('main-page');
+  menuPage.classList.add('menu-page');
+  menuPage.classList.add('hide');
   //menu title
   const menuTitle = document.createElement('h1');
   //beverage section
