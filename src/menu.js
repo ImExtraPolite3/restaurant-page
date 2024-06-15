@@ -6,7 +6,6 @@ import pollo from './images/pollo-marsala.jpeg';
 import pizza from './images/margherita-pizza.jpeg';
 import branzino from './images/branzino-al-forno.jpeg';
 
-
 export default function menu() {
   const content = document.getElementById('content'); //Call content from html
   //create div to hold all menu information
@@ -105,4 +104,29 @@ export default function menu() {
   drinkOne.appendChild(drinkOneName);
   drinkOne.appendChild(drinkOneDescription);
   drinkOne.appendChild(drinkOneImg);
+  menuPage.appendChild(drinkTwo);
+  drinkTwo.appendChild(drinkTwoName);
+  drinkTwo.appendChild(drinkTwoDescription);
+  drinkTwo.appendChild(drinkTwoImg);
+  menuPage.appendChild(appetizer);
+  menuPage.appendChild(appetizerOne);
+  appetizerOne.appendChild(appetizerOneName);
+  appetizerOne.appendChild(appetizerOneDescription);
+  appetizerOne.appendChild(appetizerOneImg);
+  menuPage.appendChild(appetizerTwo);
+  appetizerTwo.appendChild(appetizerTwoName);
+  appetizerTwo.appendChild(appetizerTwoDescription);
+  appetizerTwo.appendChild(appetizerTwoImg);
+  menuPage.appendChild(mainOne);
+  mainOne.appendChild(mainOneName);
+  mainOne.appendChild(mainOneDescription);
+  mainOne.appendChild(mainOneImg);
+  menuPage.appendChild(mainTwo);
+  mainTwo.appendChild(mainTwoName);
+  mainTwo.appendChild(mainTwoDescription);
+  mainTwo.appendChild(mainTwoImg);
+  menuPage.appendChild(mainThree);
+  mainThree.appendChild(mainThreeName);
+  mainThree.appendChild(mainThreeDescription);
+  mainThree.appendChild(mainThreeImg);
 }
