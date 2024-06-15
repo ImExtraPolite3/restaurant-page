@@ -1,5 +1,6 @@
 import './style.css';
 import home from './home';
+import menu from './menu';
 
 function showHide () {
   const home = document.querySelector('.home');
@@ -22,4 +23,5 @@ function showHide () {
 }
 
 home();
+menu();
 showHide();
