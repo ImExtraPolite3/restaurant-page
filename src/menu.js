@@ -53,3 +53,34 @@ main.textContent = 'Mains';
 //drink one
 drinkOne.textContent = 'Espresso';
 drinkOneDescription.textContent = 'Rich and intense Italian coffee.';
+drinkOneImg.src = './images/espresso.jpeg';
+
+//drink two
+drinkTwo.textContent = 'Cappuccino';
+drinkTwoDescription.textContent = 'Espresso with steamed milk and a layer of froth.';
+drinkTwoImg.src = './images/cappuccino.jpeg';
+
+//appitizer one
+appetizerOne.textContent = 'Bruschetta al Pomodoro';
+appetizerOneDescription.textContent = 'Toasted bread topped with fresh tomatoes, basil, garlic, and a drizzle of extra virgin olive oil.';
+appetizerOneImg.src = './images/bruschetta-al-pomodoro.jpeg';
+
+//appetizer two
+appetizerTwo.textContent = 'Calamari Fritti';
+appetizerTwoDescription.textContent = 'Lightly breaded and fried calamari served with marinara sauce and lemon aioli.';
+appetizerTwoImg.src = './images/calamari-fritti.jpeg';
+
+//main one
+mainOne.textContent = 'Pollo Marsala';
+mainOneDescription.textContent = 'Pan-seared chicken breast in a Marsala wine and mushroom sauce, served with roasted potatoes.';
+mainOneImg.src = './images/pollo-marsala.jpeg';
+
+//main two
+mainTwo.textContent = 'Margherita Pizza';
+mainTwoDescription.textContent = 'Classic pizza with San Marzano tomatoes, fresh mozzarella, basil, and extra virgin olive oil.';
+mainTwoImg.src = './images/margherita-pizza.jpeg';
+
+//main three
+mainThree.textContent = 'Branzino al Forno';
+mainThreeDescription.textContent = 'Whole roasted Mediterranean sea bass with lemon, herbs, and olive oil, served with sautéed spinach..';
+mainThreeImg.src = './images/branzino-al-forno.jpeg';
