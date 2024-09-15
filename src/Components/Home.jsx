@@ -10,16 +10,6 @@ function descriptionText() {
         'At La Bella Cucina, we pride ourselves on crafting a dining experience that tantalizes all your senses. Our menu, inspired by the rich culinary heritage of Italy, features a diverse selection of dishes prepared with the freshest, locally-sourced ingredients. From our handmade pastas and wood-fired pizzas to our succulent seafood and mouthwatering meat dishes, each plate is a testament to our passion for authentic, high-quality cuisine.',
       textid: crypto.randomUUID(),
     },
-    {
-      textp:
-        'Complement your meal with a selection from our extensive wine list, showcasing the finest vintages from Italy and around the world. Our knowledgeable staff is always on hand to recommend the perfect pairing to enhance your dining experience.',
-      textid: crypto.randomUUID(),
-    },
-    {
-      textp:
-        "Whether you're enjoying a romantic dinner for two, celebrating with family and friends, or hosting a special event, La Bella Cucina promises an unforgettable journey through the flavors of Italy. Join us and discover why we are a beloved destination for food lovers and connoisseurs alike.",
-      textid: crypto.randomUUID(),
-    },
   ];
 
   return text.map((eachText) => <p key={eachText.textid}>{eachText.textp}</p>);
@@ -44,7 +34,6 @@ function hours() {
 export default function Home() {
   return (
     <div id="home-content" className="content">
-      <h1>La Bella Cucina</h1>
       <div id="description">{descriptionText()}</div>
       <div id="hours">
         <h2>Hours</h2>
