@@ -18,7 +18,7 @@
 
 #nav-bar {
   display: grid;
-  grid-template-columns: 10% 90%;
+  grid-template-columns: 80% 20%;
   width: 97%;
   margin: 10px auto 20px auto;
 }
@@ -28,13 +28,8 @@
   width: 40px;
 }
 
-#nav-bar > h1 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
 .nav-img > img {
+  float: right;
   width: 40px;
 }
 
@@ -61,15 +56,26 @@
 }
 
 #nav-bar-buttons {
-  border: solid;
   display: none;
-  position: absolute;
-  height: 100vh;
-  top: 50px;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  grid-row: 3 / 4;
+  grid-column: 1 / 3;
 }
 
 .change-button {
   display: block;
+  width: 100%;
+  border: none;
+  padding: 20px 0;
+  font-size: 1rem;
+  background: white;
+  transition: background-color 500ms;
+}
+
+.change-button:hover {
+  background-color: lightgray;
 }
 
 .content {

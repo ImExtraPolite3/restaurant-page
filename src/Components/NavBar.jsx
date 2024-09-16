@@ -8,38 +8,48 @@ function NavBarButtons({ id_name, button_name, class_name, hide_content }) {
 
 function dropDownMenu() {
   const navBarButton = document.getElementById('nav-bar-buttons');
+  const allContent = document.querySelectorAll('.content');
 
-  navBarButton.checkVisibility() === false
-    ? (navBarButton.style.display = 'block')
-    : (navBarButton.style.display = 'none');
+  allContent.forEach((content) => {
+    navBarButton.checkVisibility() === false
+      ? ((navBarButton.style.display = 'block'),
+        (content.style.display = 'none'))
+      : ((navBarButton.style.display = 'none'), showHome);
+  });
 }
 
 function showHome() {
   const allContent = document.querySelectorAll('.content');
+  const navBarButton = document.getElementById('nav-bar-buttons');
 
   allContent.forEach((content) => {
     content.id === 'home-content'
-      ? (content.style.display = 'block')
+      ? ((content.style.display = 'block'),
+        (navBarButton.style.display = 'none'))
       : (content.style.display = 'none');
   });
 }
 
 function showMenu() {
   const allContent = document.querySelectorAll('.content');
+  const navBarButton = document.getElementById('nav-bar-buttons');
 
   allContent.forEach((content) => {
     content.id === 'menu-content'
-      ? (content.style.display = 'block')
+      ? ((content.style.display = 'block'),
+        (navBarButton.style.display = 'none'))
       : (content.style.display = 'none');
   });
 }
 
 function showAbout() {
   const allContent = document.querySelectorAll('.content');
+  const navBarButton = document.getElementById('nav-bar-buttons');
 
   allContent.forEach((content) => {
     content.id === 'about-content'
-      ? (content.style.display = 'block')
+      ? ((content.style.display = 'block'),
+        (navBarButton.style.display = 'none'))
       : (content.style.display = 'none');
   });
 }
@@ -47,12 +57,12 @@ function showAbout() {
 export default function NavBar() {
   return (
     <div id="nav-bar">
-      <div className="nav-img">
-        <img src="/menu.svg" alt="hamburger-menu" onClick={dropDownMenu} />
-      </div>
       <h1>
         <img src="/food.svg" alt="food" /> La Bella Cucina
       </h1>
+      <div className="nav-img">
+        <img src="/menu.svg" alt="hamburger-menu" onClick={dropDownMenu} />
+      </div>
       <div id="nav-bar-buttons">
         <NavBarButtons
           hide_content={showHome}
