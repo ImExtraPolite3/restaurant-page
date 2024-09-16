@@ -1,9 +1,17 @@
-function NavBarButtons({ id_name, button_name, hide_content }) {
+function NavBarButtons({ id_name, button_name, class_name, hide_content }) {
   return (
-    <button onClick={hide_content} id={id_name}>
+    <button onClick={hide_content} className={class_name} id={id_name}>
       {button_name}
     </button>
   );
+}
+
+function dropDownMenu() {
+  const navBarButton = document.getElementById('nav-bar-buttons');
+
+  navBarButton.checkVisibility() === false
+    ? (navBarButton.style.display = 'block')
+    : (navBarButton.style.display = 'none');
 }
 
 function showHome() {
@@ -39,33 +47,36 @@ function showAbout() {
 export default function NavBar() {
   return (
     <div id="nav-bar">
-      <h1>
-        <img src="../public/food.svg" alt="food" /> La Bella Cucina
-      </h1>
       <div className="nav-img">
-        <img src="../public/menu.svg" alt="hamburger-menu" />
+        <img src="/menu.svg" alt="hamburger-menu" onClick={dropDownMenu} />
       </div>
+      <h1>
+        <img src="/food.svg" alt="food" /> La Bella Cucina
+      </h1>
       <div id="nav-bar-buttons">
         <NavBarButtons
           hide_content={showHome}
           id_name="home"
           button_name="Home"
+          class_name="change-button"
         />
         <NavBarButtons
           hide_content={showMenu}
           id_name="menu"
           button_name="Menu"
+          class_name="change-button"
         />
         <NavBarButtons
           hide_content={showAbout}
           id_name="about"
           button_name="About"
+          class_name="change-button"
         />
       </div>
       <div id="search-bar">
-        <img src="../public/magnify.svg" alt="" />
-        <input type="text" />
-        <img src="../public/arrow-right.svg" alt="" />
+        <img src="/magnify.svg" alt="" />
+        <input type="text" placeholder="Search for item" />
+        <img src="/arrow-right.svg" alt="" />
       </div>
     </div>
   );

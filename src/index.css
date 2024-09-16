@@ -18,9 +18,9 @@
 
 #nav-bar {
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 10% 90%;
   width: 97%;
-  margin: 10px auto 30px auto;
+  margin: 10px auto 20px auto;
 }
 
 #nav-bar > h1 > img {
@@ -31,11 +31,11 @@
 #nav-bar > h1 {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .nav-img > img {
   width: 40px;
-  float: right;
 }
 
 #search-bar {
@@ -61,7 +61,15 @@
 }
 
 #nav-bar-buttons {
+  border: solid;
   display: none;
+  position: absolute;
+  height: 100vh;
+  top: 50px;
+}
+
+.change-button {
+  display: block;
 }
 
 .content {
