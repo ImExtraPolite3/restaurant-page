@@ -1,3 +1,4 @@
+const MOBILE_WIDTH = 841;
 function NavBarButtons({ id_name, button_name, class_name, hide_content }) {
   return (
     <button onClick={hide_content} className={class_name} id={id_name}>
@@ -10,48 +11,79 @@ function dropDownMenu() {
   const navBarButton = document.getElementById('nav-bar-buttons');
   const allContent = document.querySelectorAll('.content');
 
-  allContent.forEach((content) => {
-    navBarButton.checkVisibility() === false
-      ? ((navBarButton.style.display = 'block'),
-        (content.style.display = 'none'))
-      : ((navBarButton.style.display = 'none'), showHome);
-  });
+  if (window.innerWidth < MOBILE_WIDTH) {
+    if (navBarButton.checkVisibility() === false) {
+      navBarButton.style.display = 'block';
+      allContent.forEach((content) => {
+        content.style.display = 'none';
+      });
+    } else {
+      navBarButton.style.display = 'none';
+      allContent[0].style.display = 'block';
+    }
+  } else {
+    navBarButton.style.display = 'block';
+  }
 }
 
 function showHome() {
   const allContent = document.querySelectorAll('.content');
   const navBarButton = document.getElementById('nav-bar-buttons');
 
-  allContent.forEach((content) => {
-    content.id === 'home-content'
-      ? ((content.style.display = 'block'),
-        (navBarButton.style.display = 'none'))
-      : (content.style.display = 'none');
-  });
+  if (window.innerWidth < MOBILE_WIDTH) {
+    allContent.forEach((content) => {
+      content.id === 'home-content'
+        ? ((content.style.display = 'block'),
+          (navBarButton.style.display = 'none'))
+        : (content.style.display = 'none');
+    });
+  } else {
+    allContent.forEach((content) => {
+      content.id === 'home-content'
+        ? (content.style.display = 'block')
+        : (content.style.display = 'none');
+    });
+  }
 }
 
 function showMenu() {
   const allContent = document.querySelectorAll('.content');
   const navBarButton = document.getElementById('nav-bar-buttons');
 
-  allContent.forEach((content) => {
-    content.id === 'menu-content'
-      ? ((content.style.display = 'block'),
-        (navBarButton.style.display = 'none'))
-      : (content.style.display = 'none');
-  });
+  if (window.innerWidth < MOBILE_WIDTH) {
+    allContent.forEach((content) => {
+      content.id === 'menu-content'
+        ? ((content.style.display = 'block'),
+          (navBarButton.style.display = 'none'))
+        : (content.style.display = 'none');
+    });
+  } else {
+    allContent.forEach((content) => {
+      content.id === 'menu-content'
+        ? (content.style.display = 'block')
+        : (content.style.display = 'none');
+    });
+  }
 }
 
 function showAbout() {
   const allContent = document.querySelectorAll('.content');
   const navBarButton = document.getElementById('nav-bar-buttons');
 
-  allContent.forEach((content) => {
-    content.id === 'about-content'
-      ? ((content.style.display = 'block'),
-        (navBarButton.style.display = 'none'))
-      : (content.style.display = 'none');
-  });
+  if (window.innerWidth < MOBILE_WIDTH) {
+    allContent.forEach((content) => {
+      content.id === 'about-content'
+        ? ((content.style.display = 'block'),
+          (navBarButton.style.display = 'none'))
+        : (content.style.display = 'none');
+    });
+  } else {
+    allContent.forEach((content) => {
+      content.id === 'about-content'
+        ? (content.style.display = 'block')
+        : (content.style.display = 'none');
+    });
+  }
 }
 
 export default function NavBar() {
