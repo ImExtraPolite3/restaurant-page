@@ -91,6 +91,11 @@
   line-height: 25px;
 }
 
+#beverages > div > img,
+#appetizer > div > img {
+  width: 100%;
+}
+
 @media (min-width: 841px) {
   .nav-img {
     display: none;
