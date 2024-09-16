@@ -13,16 +13,14 @@ function dropDownMenu() {
 
   if (window.innerWidth < MOBILE_WIDTH) {
     if (navBarButton.checkVisibility() === false) {
-      navBarButton.style.display = 'block';
+      navBarButton.classList.remove('hide');
       allContent.forEach((content) => {
         content.style.display = 'none';
       });
     } else {
-      navBarButton.style.display = 'none';
+      navBarButton.classList.add('hide');
       allContent[0].style.display = 'block';
     }
-  } else {
-    navBarButton.style.display = 'block';
   }
 }
 
@@ -34,7 +32,7 @@ function showHome() {
     allContent.forEach((content) => {
       content.id === 'home-content'
         ? ((content.style.display = 'block'),
-          (navBarButton.style.display = 'none'))
+          navBarButton.classList.add('hide'))
         : (content.style.display = 'none');
     });
   } else {
@@ -54,7 +52,7 @@ function showMenu() {
     allContent.forEach((content) => {
       content.id === 'menu-content'
         ? ((content.style.display = 'block'),
-          (navBarButton.style.display = 'none'))
+          navBarButton.classList.add('hide'))
         : (content.style.display = 'none');
     });
   } else {
@@ -74,7 +72,7 @@ function showAbout() {
     allContent.forEach((content) => {
       content.id === 'about-content'
         ? ((content.style.display = 'block'),
-          (navBarButton.style.display = 'none'))
+          navBarButton.classList.add('hide'))
         : (content.style.display = 'none');
     });
   } else {
@@ -95,7 +93,7 @@ export default function NavBar() {
       <div className="nav-img">
         <img src="/menu.svg" alt="hamburger-menu" onClick={dropDownMenu} />
       </div>
-      <div id="nav-bar-buttons">
+      <div id="nav-bar-buttons" className="hide">
         <NavBarButtons
           hide_content={showHome}
           id_name="home"
