@@ -29,7 +29,7 @@ export default function Menu() {
         <ShowItem
           name="Bruschetta al Pomodoro"
           description="Toasted bread topped with fresh tomatoes, basil, garlic, and a drizzle of extra virgin olive oil."
-          img_link="/bruschetta-al-pomodoro.jpeg"
+          img_link="/bruschetta-al-pomodoro.jpg"
         />
         <ShowItem
           name="Calamari Fritti"

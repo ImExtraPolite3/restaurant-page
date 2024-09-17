@@ -96,6 +96,45 @@
   width: 100%;
 }
 
+#beverages,
+#appetizer {
+  width: min(85%, 350px);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#menu-content > h2 {
+  width: min(90%, 400px);
+  margin: 0 auto 10px auto;
+}
+
+#menu-content {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 400px) {
+  #menu-content > h2 {
+    width: 95%;
+  }
+
+  #beverages,
+  #appetizer {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (min-width: 700px) {
+  #beverages,
+  #appetizer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (min-width: 841px) {
   .nav-img {
     display: none;
@@ -119,5 +158,18 @@
     margin-top: 0;
     flex-grow: 3;
     align-self: center;
+  }
+
+  #beverages,
+  #appetizer {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1400px) {
+  #beverages,
+  #appetizer {
+    width: min(90%, 1400px);
   }
 }
