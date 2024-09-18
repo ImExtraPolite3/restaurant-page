@@ -1,3 +1,56 @@
+const beverageItems = [
+  {
+    name: 'Espresso',
+    key: '1',
+    description: 'Rich and intense Italian coffee.',
+    img_link: '/espresso.jpeg',
+  },
+  {
+    name: 'Cappuccino',
+    key: '2',
+    description: 'Espresso with steamed milk and a layer of froth.',
+    img_link: '/cappuccino.jpeg',
+  },
+];
+
+const appetizerItems = [
+  {
+    name: 'Bruschetta al Pomodoro',
+    key: '1',
+    description:
+      'Toasted bread topped with fresh tomatoes, basil, garlic, and a drizzle of extra virgin olive oil.',
+    img_link: '/bruschetta-al-pomodoro.jpg',
+  },
+  {
+    name: 'Calamari Fritti',
+    key: '2',
+    description:
+      'Lightly breaded and fried calamari served with marinara sauce and lemon aioli.',
+    img_link: '/calamari-fritti.jpeg',
+  },
+  {
+    name: 'Pollo Marsala',
+    key: '3',
+    description:
+      'Pan-seared chicken breast in a Marsala wine and mushroom sauce, served with roasted potatoes.',
+    img_link: '/pollo-marsala.jpeg',
+  },
+  {
+    name: 'Margherita Pizza',
+    key: '4',
+    description:
+      'Classic pizza with San Marzano tomatoes, fresh mozzarella, basil, and extra virgin olive oil.',
+    img_link: '/margherita-pizza.jpeg',
+  },
+  {
+    name: 'Branzino al Forno',
+    key: '5',
+    description:
+      'Whole roasted Mediterranean sea bass with lemon, herbs, and olive oil, served with sautéed spinach.',
+    img_link: 'branzino-al-forno.jpeg',
+  },
+];
+
 function ShowItem({ name, description, img_link }) {
   return (
     <div>
@@ -8,50 +61,29 @@ function ShowItem({ name, description, img_link }) {
   );
 }
 
+function MenuCategory({ title, menuItems }) {
+  return (
+    <>
+      <h2>{title}</h2>
+      <div id={title.toLowerCase()}>
+        {menuItems.map((items) => (
+          <ShowItem
+            key={items.key}
+            name={items.name}
+            description={items.description}
+            img_link={items.img_link}
+          />
+        ))}
+      </div>
+    </>
+  );
+}
+
 export default function Menu() {
   return (
     <div id="menu-content" className="content">
-      <h2>Beverages</h2>
-      <div id="beverages">
-        <ShowItem
-          name="Espresso"
-          description="Rich and intense Italian coffee."
-          img_link="/espresso.jpeg"
-        />
-        <ShowItem
-          name="Cappuccino"
-          description="Espresso with steamed milk and a layer of froth."
-          img_link="/cappuccino.jpeg"
-        />
-      </div>
-      <h2>Appetizers</h2>
-      <div id="appetizer">
-        <ShowItem
-          name="Bruschetta al Pomodoro"
-          description="Toasted bread topped with fresh tomatoes, basil, garlic, and a drizzle of extra virgin olive oil."
-          img_link="/bruschetta-al-pomodoro.jpg"
-        />
-        <ShowItem
-          name="Calamari Fritti"
-          description="Lightly breaded and fried calamari served with marinara sauce and lemon aioli."
-          img_link="/calamari-fritti.jpeg"
-        />
-        <ShowItem
-          name="Pollo Marsala"
-          description="Pan-seared chicken breast in a Marsala wine and mushroom sauce, served with roasted potatoes."
-          img_link="/pollo-marsala.jpeg"
-        />
-        <ShowItem
-          name="Margherita Pizza"
-          description="Classic pizza with San Marzano tomatoes, fresh mozzarella, basil, and extra virgin olive oil."
-          img_link="/margherita-pizza.jpeg"
-        />
-        <ShowItem
-          name="Branzino al Forno"
-          description="Whole roasted Mediterranean sea bass with lemon, herbs, and olive oil, served with sautéed spinach."
-          img_link="branzino-al-forno.jpeg"
-        />
-      </div>
+      <MenuCategory title="Beverages" menuItems={beverageItems} />
+      <MenuCategory title="Appetizer" menuItems={appetizerItems} />
     </div>
   );
 }
