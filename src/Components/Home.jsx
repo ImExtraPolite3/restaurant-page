@@ -39,10 +39,10 @@ export default function Home() {
         <h2>Hours</h2>
         <ul>{hours()}</ul>
       </div>
-      <div id="location">
+      {/* <div id="location">
         <h2>Location</h2>
         <p>Suite 502 94930 Larkin Crossing, Stammmouth, LA 88152</p>
-      </div>
+      </div> */}
     </div>
   );
 }

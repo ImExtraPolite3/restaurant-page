@@ -82,18 +82,46 @@
 }
 
 .content {
-  width: 95%;
+  width: min(95%, 900px);
   margin: auto;
   color: #333;
 }
 
-#description {
-  line-height: 25px;
+#home-content,
+#about-content {
+  line-height: 30px;
+}
+
+#hours {
+  width: 85%;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+#hours > h2 {
+  margin-bottom: 5px;
+}
+
+#hours > ul {
+  list-style: none;
+}
+
+#menu-content > h2 {
+  padding: 10px 0;
 }
 
 #beverages > div > img,
 #appetizer > div > img {
   width: 100%;
+}
+
+#beverages > div,
+#appetizer > div {
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 #beverages,
@@ -128,6 +156,12 @@
   }
 }
 
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
 @media (min-width: 700px) {
   #beverages,
   #appetizer {
@@ -136,6 +170,12 @@
 }
 
 @media (min-width: 841px) {
+  #home-content,
+  #about-content {
+    font-size: 1.1rem;
+    line-height: 35px;
+  }
+
   .nav-img {
     display: none;
   }
@@ -158,12 +198,6 @@
     margin-top: 0;
     flex-grow: 3;
     align-self: center;
-  }
-
-  #beverages,
-  #appetizer {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
   }
 }
 
