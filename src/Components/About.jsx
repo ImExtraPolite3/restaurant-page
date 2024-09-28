@@ -10,6 +10,10 @@ export default function About() {
         creating a warm, welcoming atmosphere where guests can enjoy the simple
         pleasures of Italian cooking, just like back home.
       </p>
+      <div id="location">
+        <h2>Location</h2>
+        <p>Suite 502 94930 Larkin Crossing, Stammmouth, LA 88152</p>
+      </div>
     </div>
   );
 }
