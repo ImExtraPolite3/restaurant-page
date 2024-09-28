@@ -3,7 +3,7 @@ const MOBILE_WIDTH = 841;
 function NavBarButtons({ id_name, button_name, class_name, hide_content }) {
   return (
     <button onClick={hide_content} className={class_name} id={id_name}>
-      {button_name}
+      <p>{button_name}</p>
     </button>
   );
 }

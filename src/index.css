@@ -69,16 +69,22 @@
 
 .change-button {
   display: block;
+  height: 100%;
   width: 100%;
   border: none;
   padding: 20px 0;
   font-size: 1rem;
   background: white;
-  transition: background-color 500ms;
 }
 
-.change-button:hover {
-  background-color: lightgray;
+.change-button > p {
+  width: 100%;
+  height: 100%;
+  transition: transform 500ms;
+}
+
+.change-button > p:hover {
+  transform: scale(1.2);
 }
 
 .content {
