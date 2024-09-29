@@ -69,18 +69,18 @@ export default function NavBar() {
   return (
     <div id="nav-bar">
       <h1>
-        <img src="/food.svg" alt="food" /> La Bella Cucina
+        <img src="food.svg" alt="food" /> La Bella Cucina
       </h1>
       <div className="nav-img">
-        <img src="/menu.svg" alt="hamburger-menu" onClick={dropDownMenu} />
+        <img src="menu.svg" alt="hamburger-menu" onClick={dropDownMenu} />
       </div>
       <div id="nav-bar-buttons" className="hide">
         <DisplayNavButtons />
       </div>
       <div id="search-bar">
-        <img src="/magnify.svg" alt="" />
+        <img src="magnify.svg" alt="" />
         <input type="text" placeholder="Search for item" />
-        <img src="/arrow-right.svg" alt="" />
+        <img src="arrow-right.svg" alt="" />
       </div>
     </div>
   );
