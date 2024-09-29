@@ -1,8 +1,19 @@
-# React + Vite
+# Restaurant Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Project Overview**
 
-Currently, two official plugins are available:
+This project was made in order to hammer in the basics of react by creating a restaurant page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Features**
+
+Made use of components in order to separate different parts of the pages. Used props so there wouldnt be any need to repeat different functions. Used minimal animation for the nav bar buttons.
+
+**Technologies Used:**
+
+Languages: HTML, CSS, JavaScript
+Libraries: React
+Other: GitHub Pages for hosting, Vite for React
+
+**Live Demo:**
+
+<a href="https://imextrapolite3.github.io/restaurant-page/">link to project demo page</a>
